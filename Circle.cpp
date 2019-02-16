@@ -43,6 +43,7 @@ int Circle::GetDistance(unsigned myX, unsigned myY) {
 }
 
 
+// Draw the circle.
 void Circle::Draw() {
 	if (!isDiameterConfigured) {
 		throw std::invalid_argument("diameter not defined");
