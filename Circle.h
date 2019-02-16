@@ -3,35 +3,28 @@
 class Circle
 {
 public:
-	// basic functions
-	int GetDistance(int myX, int myY);		// get distance from circle center - radius
-	void SetCanvas(int myX, int myY);		// define canvas size
-	void SetDiameter(int myint);			// define circle diameter
-	void SetPosition(int myX, int myY);		// define circle center position
-	void SetSymbol(char myChar);			// define circle's symbol
-	void Draw();							// draw circle
-
-	Circle();
-	~Circle();
+	int GetDistance(unsigned myX, unsigned myY);
+	void SetCanvas(unsigned myX, unsigned myY);
+	void SetPosition(unsigned myX, unsigned myY);
+	void SetDiameter(unsigned myD);
+	void SetSymbol(char myC);
+	void Draw();
 
 private:
-	// invalid argument checks
 	bool isCanvasSizeConfigured = false;
 	bool isPositionConfigured = false;
 	bool isDiameterConfigured = false;
 	bool isSymbolConfigured = false;
 
-	// canvas properties
-	int canvasWidth;
-	int canvasHeight;
+	unsigned canvasWidth;
+	unsigned canvasHeight;
 
-	// circle properties
-	int circleX;
-	int circleY;
-	int diameter;
-	int radius;
+	unsigned circleX;
+	unsigned circleY;
 
-	// symbol properties
+	unsigned diameter;
+	unsigned radius;
+
 	char symbol;
 };
 
